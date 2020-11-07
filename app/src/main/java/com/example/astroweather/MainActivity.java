@@ -1,5 +1,6 @@
 package com.example.astroweather;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,8 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
+    double longitude = 123.44;
 
 
     @Override
@@ -19,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setSupportActionBar(findViewById(R.id.my_toolbar));
-        getSupportActionBar().setElevation(0);
+
+
 
         ViewPager2 viewPager2 = findViewById(R.id.viewPager);
         ViewPager2Adapter viewPager2Adapter = new ViewPager2Adapter(getSupportFragmentManager(), getLifecycle());
@@ -32,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.btnSettings) {
-            Toast.makeText(getApplicationContext(), "ELOOO", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, SettingsActivity.class );
+            startActivity(intent);
             return true;
         } else {
             return super.onOptionsItemSelected(item);

@@ -12,6 +12,7 @@ public class SunFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        MainActivity mMain = (MainActivity)getActivity();
         return inflater.inflate(R.layout.sun_view, container, false);
     }
 }

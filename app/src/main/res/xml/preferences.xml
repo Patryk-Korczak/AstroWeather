@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:title="Localization">
+
+    </PreferenceCategory>
+    <EditTextPreference
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:inputType="number"
+        android:key="longitude"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Longitude" />
+    <EditTextPreference
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:inputType="number"
+        android:key="latitude"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Latitude" />
+    <PreferenceCategory
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:title="Other">
+
+    </PreferenceCategory>
+    <EditTextPreference
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:inputType="number"
+        android:key="refresh"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Refresh rate" />
+</PreferenceScreen>
